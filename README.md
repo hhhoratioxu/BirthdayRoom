@@ -1,5 +1,7 @@
 # Birthday Room · 生日小屋
 
+**[直接打开小屋 · 在线体验](https://hhhoratioxu.github.io/BirthdayRoom/)** · 无需登录或安装，支持电脑和手机浏览器。
+
 一间为你留着灯的小屋。一个真正可以走入、探索、解谜、打开礼物、许愿和吹灭蜡烛的 3D 生日网页游戏。
 
 使用 React、TypeScript、Vite、Three.js、React Three Fiber、drei、Zustand、Tailwind CSS、Motion 和 Web Audio API。房间、家具、植株、纸张与木纹、礼物盒、蛋糕和特效全部由代码生成，无需下载模型或依赖外部音频服务。
@@ -34,6 +36,16 @@ npm run preview
 ```
 
 构建输出为 `dist/`，可以部署到支持 HTTPS 的静态托管服务。应用不需要后端、账号、API 密钥或付费服务。
+
+## GitHub Pages 部署
+
+公开体验地址为 **https://hhhoratioxu.github.io/BirthdayRoom/**。
+
+仓库的 [Pages 工作流](.github/workflows/pages.yml) 在每次推送到 `main` 时自动运行，也可以在 Actions 中手动启动。它使用 Node.js 24 和锁定的 pnpm 版本安装依赖，执行单元测试，再构建并部署。仓库 Settings → Pages 的发布来源应选择 **GitHub Actions**。
+
+`npm run build:pages` 会使用 `/BirthdayRoom/` 作为资源基础路径，适配 GitHub Pages 的项目子目录；普通 `npm run build` 和本地开发仍使用根路径。仓库改名或迁移时，需要同步调整 `build:pages` 中的路径和此体验链接。
+
+部署状态见 [GitHub Actions](https://github.com/hhhoratioxu/BirthdayRoom/actions/workflows/pages.yml)。
 
 ## 体验与操作
 
